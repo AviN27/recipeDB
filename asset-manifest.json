@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/recipeDB/static/css/main.1caeeec3.css",
+    "main.js": "/recipeDB/static/js/main.8972abd7.js",
+    "index.html": "/recipeDB/index.html",
+    "main.1caeeec3.css.map": "/recipeDB/static/css/main.1caeeec3.css.map",
+    "main.8972abd7.js.map": "/recipeDB/static/js/main.8972abd7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1caeeec3.css",
+    "static/js/main.8972abd7.js"
+  ]
+}
