@@ -30,6 +30,7 @@ const Navibar = () => {
                 <li className='p-4 border-b border-b-gray-600'>Settings</li>
                 <li className='p-4'>Contact</li>
             </ul>
+            <a className='p-4 text-blue-50' href="https://www.freepik.com/icons/recipe">Icon by photo3idea_studio</a>
         </div>
 
     </div>

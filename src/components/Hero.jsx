@@ -23,6 +23,8 @@ const Hero = () => {
         }
     };
 
+    const instructionArray = recipe.strInstructions.split('. ');
+
   return (
     <div className='text-white' >
         <div className={!view ? 'max-w-[800px] mx-auto text-center flex flex-col justify-center p-3 mt-40 ease-in-out duration-75' : 'fixed right-[-200%]'} >
@@ -42,9 +44,6 @@ const Hero = () => {
         </div>
 
         <div className={view ? 'border-4 border-[#00df9a] flex justify-center text-center flex-col m-10 rounded-3xl p-3 ease-in-out duration-75' : 'fixed bottom-[-350%]'}>
-            <div className=' pt-4 pl-4 align-middle ease-in-out duration-300' onClick={handleView}>
-                {view ? <AiOutlineClose size={20}/> : <AiOutlineClose size={20}/>} 
-            </div>
             {recipe && (
                 <div className='px-4 pb-4'>
                     <h2 className='text-[#00df9a] font-bold md:text-4xl sm:text-3xl text-3xl md:py-6 sm:py-5 py-5'>{recipe.strMeal}.</h2>
@@ -65,7 +64,16 @@ const Hero = () => {
                         </div>
                     </div>
                     <h3 className='font-bold md:text-3xl sm:text-2xl text-2xl md:py-5 text-justify py-5'>Instructions.</h3>
-                    <p className='text-justify'>{recipe.strInstructions}</p>
+                    <div className='text-justify pl-7 pb-5'>
+                        <ul className='list-disc marker:text-[#00df9a]'>{instructionArray.map(item => <li>{item}</li>)}</ul>
+                    </div>
+                    
+                    <button onClick={handleView} className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#00df9a] to-blue-600 group-hover:from-[#00df9a] group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+                        <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            Close and view recipes
+                        </span>
+                    </button>
+
                 </div>
             )}
         </div>
